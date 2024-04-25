@@ -20,3 +20,15 @@ Generate load:
 ```
 python3 generate_load.py
 ```
+
+# Patch Nginx deployment
+
+```
+kubectl -n <your-namespace> patch deployment nginx --patch-file nginx_patch.yaml
+```
+
+To undo the patch:
+
+```
+kubectl -n user1 rollout undo deployment nginx
+```
